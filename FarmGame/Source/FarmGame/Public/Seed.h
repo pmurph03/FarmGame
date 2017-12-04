@@ -1,15 +1,29 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
+
 #include "Selectable.h"
 #include "GameFramework/Actor.h"
 #include "Seed.generated.h"
+
+class APlant;
+class AFarmer;
 
 UCLASS()
 class  ASeed : public AActor, public ISelectable
 {
 	GENERATED_BODY()
-	
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool bIsSelected = false;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		TSubclassOf<APlant> PlantBlueprint = nullptr;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		FVector SelectedPositionOffset = FVector(0.0, 0.0, 0.0);
+
 public:	
 	// Sets default values for this actor's properties
 	ASeed();

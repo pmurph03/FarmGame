@@ -17,19 +17,25 @@ protected:
 		TSubclassOf<ASeed> SeedBlueprint = nullptr;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-		float WaterLevelRequirement = 100.0;
+		float WaterLevelMax = 100.0;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 		float WaterDecreasePerTick = 0.1;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-		float WaterGrowthMultiplier = 0.0;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float WaterGrowthMultiplier = 1.0;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-		float GrowthTimeLength = 100.0;
+		float GrowthTimeMax = 100.0;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 		int FertilizeMax = 3;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float FertilizeGrowthMultiplier = 1.0;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		FVector GrowthStartScale = FVector(0.0, 0.0, 0.0);
 
 public:	
 	// Sets default values for this actor's properties
@@ -50,8 +56,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int FertilizeCurrent = 0;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		bool bIsGrowing = false;
+
 
 	
 };
