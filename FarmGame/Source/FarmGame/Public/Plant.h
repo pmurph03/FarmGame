@@ -35,8 +35,13 @@ protected:
 		float FertilizeGrowthMultiplier = 1.0;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-		FVector GrowthStartScale = FVector(0.0, 0.0, 0.0);
+		float GrowthStartScale = 0.1;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		float BaseFinalScale = 1.0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool bJustFertilized = false;
 public:	
 	// Sets default values for this actor's properties
 	APlant();
@@ -58,7 +63,5 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		bool bIsGrowing = false;
-
-
 	
 };
