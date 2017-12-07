@@ -20,7 +20,7 @@ protected:
 		float WaterLevelMax = 100.0;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-		float WaterDecreasePerTick = 0.1;
+		float WaterDecreasePerSecond = 0.1;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float WaterGrowthMultiplier = 1.0;
