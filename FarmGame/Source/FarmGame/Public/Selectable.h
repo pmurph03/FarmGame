@@ -17,6 +17,6 @@ class FARMGAME_API ISelectable {
 	GENERATED_IINTERFACE_BODY()
 
 public:
-	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Select Reaction")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "ISelectable")
 		bool Select();
 };
