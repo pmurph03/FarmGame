@@ -25,7 +25,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float WaterGrowthMultiplier = 1.0;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) //TODO: Modified from edit defaults only / blue print read only for testing purposes.
 		float GrowthTimeMax = 100.0;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
