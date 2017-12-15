@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Plant.h"
+
 #include "FarmGame.h"
 #include "PriceComponent.h"
-
+#include "Plant.h"
 
 float UPriceComponent::GetPlayerSellPrice()
 {
